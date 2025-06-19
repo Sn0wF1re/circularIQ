@@ -109,7 +109,7 @@
             <BaseCard elevated>
               <div class="flex flex-col items-center text-center p-4">
                 <div class="w-24 h-24 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mb-4">
-                  <span class="text-4xl text-primary">85%</span>
+                  <span class="text-4xl text-background">85%</span>
                 </div>
                 <h3 class="text-xl font-semibold text-forest">Average Compliance Score</h3>
                 <p class="text-muted mt-2">for businesses using CircularIQ</p>
