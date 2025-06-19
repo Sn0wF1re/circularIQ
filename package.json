@@ -1,0 +1,38 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "seed": "node server/scripts/seed-database.js",
+    "start": "node .output/server/index.mjs",
+    "setup": "./setup.sh",
+    "clean": "rm -rf .nuxt dist .output",
+    "db:schema": "node server/scripts/apply-schema.js",
+    "db:schema:dry": "node server/scripts/apply-schema.js --dry-run",
+    "db:schema:reset": "node server/scripts/apply-schema.js --drop-tables",
+    "db:test": "node server/scripts/test-connection.js",
+    "db:init": "node server/scripts/create-sql-function.js"
+  },
+  "dependencies": {
+    "@formkit/nuxt": "^1.6.9",
+    "@nuxtjs/supabase": "^1.5.1",
+    "@pinia/nuxt": "^0.11.0",
+    "@supabase/supabase-js": "^2.49.8",
+    "@tailwindcss/vite": "^4.1.7",
+    "apexcharts": "^4.7.0",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^16.5.0",
+    "nuxt": "^3.17.4",
+    "pdfkit": "^0.17.1",
+    "pinia": "^3.0.2",
+    "tailwindcss": "^4.1.7",
+    "vue": "^3.5.14",
+    "vue-router": "^4.5.1",
+    "vue3-apexcharts": "^1.8.0"
+  }
+}

@@ -1,0 +1,88 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Main brand colors */
+  --color-primary: rgb(40 167 69);    /* #28A745 - Leaf Green */
+  --color-primary-hover: rgb(33 136 56);
+  --color-accent: rgb(152 255 152);   /* #98FF98 - Mint Green */
+  --color-accent-hover: rgb(122 240 122);
+  --color-forest: rgb(20 83 45);      /* #14532D - Forest Green */
+  --color-forest-hover: rgb(16 66 36);
+  
+  /* UI colors */
+  --color-background: rgb(239 251 240); /* #EFFBF0 - Off-white */
+  --color-surface: rgb(244 244 244);  /* #F4F4F4 - Light Gray */
+  --color-muted: rgb(107 114 128);    /* #6B7280 - Tailwind Gray 500 */
+  
+  /* Semantic colors */
+  --color-success: rgb(52 211 153);   /* #34D399 */
+  --color-warning: rgb(251 191 36);   /* #FBBF24 */
+  --color-danger: rgb(239 68 68);     /* #EF4444 */
+  --color-info: rgb(59 130 246);      /* #3B82F6 */
+}
+
+/* Component classes */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  transition-property: color, background-color, border-color;
+  transition-duration: 200ms;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-outline {
+  border-width: 1px;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+}
+
+.sidebar-link {
+  @apply flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-accent hover:text-white hover:bg-forest-hover transition-colors;
+}
+
+.sidebar-link.active {
+  @apply bg-forest-hover text-white;
+}
+
+/* Fix for button text visibility on hover */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white !important;
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: white !important;
+}
+
+/* Ensure sidebar link text is always visible */
+.sidebar-link, .sidebar-link:hover, .sidebar-link.active {
+  color: white !important;
+}
+
+.sidebar-link {
+  color: var(--color-accent) !important;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+  color: white !important;
+  background-color: rgba(16, 66, 36, 0.8) !important;
+}
